@@ -1,0 +1,31 @@
+#send-to-omnifocus
+{
+	background: black -webkit-linear-gradient(top, #dbdbdb 0%,#dedede 12%,#e0e0e0 25%,#dadada 39%,#d5d5d5 50%,#c4c4c4 51%,#c4c4c4 60%,#cccccc 76%,#d8d8d8 91%,#d0d0d0 100%);
+	border-radius: 7px;
+	color: #555;
+	cursor: pointer;
+	display: block;
+	font-size: 2em;
+	padding: 5px 15px 5px 50px;
+	position: relative;
+}
+
+#send-to-omnifocus:before
+{
+	background: url('chrome-extension://__MSG_@@extension_id__/images/omnifocus-32.png') no-repeat top left;
+	content: '';
+	display: inline-block;
+	left:10px;
+	height:32px;
+	position: absolute;
+	top:7px;
+	width: 32px;
+	z-index: 1;
+}
+
+#send-to-omnifocus:hover
+{
+	background: black -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+	color: white;
+	text-decoration: none;
+}

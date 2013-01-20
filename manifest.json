@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+
+	"name": "JIRA to Omnifocus",
+	"description": "Adds a 'Send to Omnifocus' button to JIRA ticket pages.",
+	"icons": { "256": "images/omnifocus-256.png" },
+	"version": "1.0",
+
+	"permissions": [
+		"tabs"
+	],
+
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/browse/*",
+				"https://*/browse/*"
+			],
+			"css": ["css/content.css"],
+			"js": ["js/zepto.min.js", "js/content.js"]
+		}
+	],
+
+	"web_accessible_resources": [
+		"images/omnifocus-32.png",
+		"images/omnifocus-64.png",
+		"images/omnifocus-256.png"
+	]
+
+}
