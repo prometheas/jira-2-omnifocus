@@ -21,6 +21,11 @@
 		}
 	],
 
+	"background": {
+		"scripts": ["js/events.js"],
+		"persistent": false
+	},
+
 	"web_accessible_resources": [
 		"images/omnifocus-32.png",
 		"images/omnifocus-64.png",
