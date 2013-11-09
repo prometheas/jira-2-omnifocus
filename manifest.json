@@ -21,6 +21,7 @@
 		}
 	],
 
+	"options_page": "options.html",
 	"background": {
 		"scripts": ["js/events.js"],
 		"persistent": false
