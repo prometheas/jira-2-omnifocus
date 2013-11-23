@@ -17,6 +17,10 @@ At this time, this extension only works its magic from the ticket detail page.  
 
 ## Release Notes
 
+### v1.1.1
+
+- Clicking the "Send to OmniFocus" button no longer fails to create a task on JIRA installs that are accessed via HTTPS.
+
 ### v1.1
 
 - Added [Mail Drop](http://www.omnigroup.com/blog/deliver-actions-to-your-omnifocus-inbox-with-mail-drop) support.
