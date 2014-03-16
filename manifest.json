@@ -14,7 +14,9 @@
 		{
 			"matches": [
 				"http://*/browse/*",
-				"https://*/browse/*"
+				"https://*/browse/*",
+				"http://*/**/browse/*",
+				"https://*/**/browse/*"
 			],
 			"css": ["css/content.css"],
 			"js": ["js/zepto.min.js", "js/content.js"]

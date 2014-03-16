@@ -17,6 +17,10 @@ At this time, this extension only works its magic from the ticket detail page.  
 
 ## Release Notes
 
+### v1.1.2
+
+- Adding support for JIRA installations configured deeper within a host's document root. Fixes #6.
+
 ### v1.1.1
 
 - Clicking the "Send to OmniFocus" button no longer fails to create a task on JIRA installs that are accessed via HTTPS.
