@@ -2,10 +2,7 @@ $(function() {
 
 	// creates an OF task using the supplied ticket info
 	function createTaskForTicket(ticket) {
-		var note = [];
-		note.push(window.location.href);
-		note.push(ticket.details);
-		note.push(ticket.description);
+		var note = [window.location.href, ticket.details, ticket.description];
 
 		var message = {
 			method: "createTask",
