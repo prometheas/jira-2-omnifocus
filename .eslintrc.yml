@@ -1,0 +1,4 @@
+---
+  extends: airbnb/legacy
+  env:
+    node: true
