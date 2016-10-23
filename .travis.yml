@@ -16,5 +16,5 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
 
 script:
-  - npm run lint
   - npm run test
+  # - npm run lint
