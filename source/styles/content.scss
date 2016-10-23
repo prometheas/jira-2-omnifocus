@@ -24,7 +24,7 @@ $send-button-text-color-hover: #fff;
   padding: 5px 15px 5px 50px;
   position: relative;
 
-  ::before {
+  &::before {
     // button icon
     background: url('chrome-extension://__MSG_@@extension_id__/images/omnifocus-32.png') no-repeat top left;
     content: '';
@@ -37,7 +37,7 @@ $send-button-text-color-hover: #fff;
     z-index: 1;
   }
 
-  :hover {
+  &:hover {
     background: #000 -webkit-linear-gradient(
       top,
       #4c4c4c 0%,
