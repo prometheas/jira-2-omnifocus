@@ -25,8 +25,7 @@ gulp.task('build:add-vendor-js', ['bower:build-zepto'], function vendorDeps() {
   return gulp
     .src('vendor/**/*.min.js')
     .pipe(gulp.dest('build/chrome/js/vendor'))
-    .pipe(gulp.dest('build/firefox/js/vendor'))
-    .pipe(gulp.dest('build/safari/js/vendor'));
+    .pipe(gulp.dest('build/firefox/js/vendor'));
 });
 
 // gulp.task('vendor:build', )
@@ -35,24 +34,21 @@ gulp.task('build:js', function buildJs() {
   return gulp
     .src('source/js/*.js')
     .pipe(gulp.dest('build/chrome/js'))
-    .pipe(gulp.dest('build/firefox/js'))
-    .pipe(gulp.dest('build/safari/js'));
+    .pipe(gulp.dest('build/firefox/js'));
 });
 
 gulp.task('build:main', function buildMain() {
   return gulp
     .src('source/*.*')
     .pipe(gulp.dest('build/chrome'))
-    .pipe(gulp.dest('build/firefox'))
-    .pipe(gulp.dest('build/safari'));
+    .pipe(gulp.dest('build/firefox'));
 });
 
 gulp.task('build:images', function buildImages() {
   return gulp
     .src('source/images/**')
     .pipe(gulp.dest('build/chrome/images'))
-    .pipe(gulp.dest('build/firefox/images'))
-    .pipe(gulp.dest('build/safari/images'));
+    .pipe(gulp.dest('build/firefox/images'));
 });
 
 gulp.task('build:scss', function buildCss() {
@@ -60,8 +56,7 @@ gulp.task('build:scss', function buildCss() {
     .src('source/styles/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('build/chrome/css'))
-    .pipe(gulp.dest('build/firefox/css'))
-    .pipe(gulp.dest('build/safari/css'));
+    .pipe(gulp.dest('build/firefox/css'));
 });
 
 gulp.task('lint:js', function lintJs() {
