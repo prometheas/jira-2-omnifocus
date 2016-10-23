@@ -4,9 +4,10 @@
   "description": "Chrome extension for sending JIRA tickets to OmniFocus.",
   "main": "index.js",
   "scripts": {
-    "clean": "./node_modules/.bin/gulp clean",
-    "build": "./node_modules/.bin/gulp build",
-    "lint": "./node_modules/.bin/eslint ./js && scss-lint source/**/*.scss",
+    "clean": "npm run gulp clean",
+    "build": "npm run gulp build",
+    "gulp": "./node_modules/.bin/gulp",
+    "lint": "npm run gulp lint",
     "test:all": "./node_modules/.bin/mocha test/**/*.spec.js"
   },
   "repository": {
