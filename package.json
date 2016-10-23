@@ -31,7 +31,9 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
     "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
     "gulp-sass": "^2.3.2",
+    "gulp-scss-lint": "^0.4.0",
     "mocha": "^3.1.2",
     "shelljs": "^0.7.4"
   }
