@@ -4,6 +4,7 @@
   "description": "Chrome extension for sending JIRA tickets to OmniFocus.",
   "main": "index.js",
   "scripts": {
+    "bower": "./node_modules/.bin/bower",
     "clean": "npm run gulp clean",
     "build": "npm run gulp build",
     "gulp": "./node_modules/.bin/gulp",
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/prometheas/jira-2-omnifocus#readme",
   "private": true,
   "devDependencies": {
+    "bower": "^1.7.9",
     "chai": "^3.5.0",
     "chai-fs-latest": "^0.1.0",
     "css-lint": "^1.0.1",
@@ -32,9 +34,11 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
     "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
     "gulp-eslint": "^3.0.1",
     "gulp-sass": "^2.3.2",
     "gulp-scss-lint": "^0.4.0",
+    "gulp-shell": "^0.5.2",
     "mocha": "^3.1.2",
     "shelljs": "^0.7.4"
   }

@@ -1,0 +1,22 @@
+{
+  "name": "jira-2-omnifocus",
+  "description": "Chrome extension for sending JIRA tickets to OmniFocus.",
+  "main": "index.js",
+  "authors": [
+    "John Lianoglou <https://github.com/prometheas>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/prometheas/jira-2-omnifocus",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zeptojs": "^1.2.0"
+  }
+}
