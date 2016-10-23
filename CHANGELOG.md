@@ -7,11 +7,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
-- ESLint and EditorConfig configs to project
+- Initial automated tests
+- ESLint, scss-lint, and EditorConfig configs to project
 - Hound CI configs to automatically lint code contributed via pull requests
+- Gulp-based build script
 ### Changed
 - Moved release notes from [README.md](./README.md) to this file
+- Styles are now declared with scss
+- Relocated files used to build the actual extension into the `source` directory, leaving only project config and metadata files at the root
+- Zepto is now installed via bower during build
 - JS files now conform to ESLint configs
+- Replaced use of deprecated `chrome.extension` API with `chrome.runtime`
 
 ## v1.1.2
 ### Added
