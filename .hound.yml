@@ -2,3 +2,6 @@ eslint:
   enabled: true
   config_file: .eslintrc.yml
   ignore_file: .eslintignore
+
+scss:
+  config_file: .scss-lint.yml

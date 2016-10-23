@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "./node_modules/.bin/gulp clean",
     "build": "./node_modules/.bin/gulp build",
-    "lint": "./node_modules/.bin/eslint . && ./node_modules/.bin/csslint **/*.css",
+    "lint": "./node_modules/.bin/eslint ./js && scss-lint source/**/*.scss",
     "test:all": "./node_modules/.bin/mocha test/**/*.spec.js"
   },
   "repository": {

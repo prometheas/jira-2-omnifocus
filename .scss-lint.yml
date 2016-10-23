@@ -1,0 +1,12 @@
+#scss_files: 'source/styles/*.scss'
+
+linters:
+
+  ColorVariable:
+    enabled: false
+
+  IdSelector:
+    enabled: false
+
+  UrlFormat:
+    enabled: false
