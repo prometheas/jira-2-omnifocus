@@ -11,9 +11,10 @@ $(function () {
       }
     };
 
-    chrome.extension.sendMessage(message, function (data) {
-      // TODO: might want to do something fancy in this callback
-      // console.info("Response %s", data);
+    chrome.runtime.sendMessage(message, function (data) {
+      $('<iframe style="display:none">')
+        .attr('src', data.url)
+        .appendTo('body');
     });
   }
 
