@@ -17,6 +17,7 @@
     "tests"
   ],
   "dependencies": {
+    "react": "^15.4.2",
     "zeptojs": "^1.2.0"
   }
 }
