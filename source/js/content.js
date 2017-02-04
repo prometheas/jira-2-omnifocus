@@ -1,5 +1,7 @@
 /* eslint-env browser, jquery, webextensions */
 
+var $sendButton = $("<a id=\"send-to-omnifocus\">Send to OmniFocus &raquo;</a>");
+
 $(function () {
   // creates an OF task using the supplied ticket info
   function createTaskForTicket(ticket) {
@@ -18,7 +20,6 @@ $(function () {
     });
   }
 
-  var $sendButton = $("<a id=\"send-to-omnifocus\">Send to OmniFocus &raquo;</a>");
   $sendButton.prependTo("#viewissuesidebar");
 
   $sendButton.on('click', function (evt) {
