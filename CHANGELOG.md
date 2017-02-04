@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - ESLint, scss-lint, and EditorConfig configs to project
 - Hound CI configs to automatically lint code contributed via pull requests
 - Gulp-based build script
+- Travis CI configs
 ### Changed
 - Moved release notes from [README.md](./README.md) to this file
 - Styles are now declared with scss
