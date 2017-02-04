@@ -30,8 +30,6 @@ gulp.task('build:add-vendor-js', ['bower:build-zepto'], function vendorDeps() {
     .pipe(gulp.dest('build/firefox/js/vendor'));
 });
 
-// gulp.task('vendor:build', )
-
 gulp.task('build:js', function buildJs() {
   return gulp
     .src('source/js/*.js')
