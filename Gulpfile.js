@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var del = require('del');
 var bower = require('gulp-bower');
 var sass = require('gulp-sass');
+var browserify = require('gulp-browserify');
 var shell = require('gulp-shell');
 
 var eslint = require('gulp-eslint');
@@ -33,6 +34,10 @@ gulp.task('build:add-vendor-js', ['bower:build-zepto'], function vendorDeps() {
 gulp.task('build:js', function buildJs() {
   return gulp
     .src('source/js/*.js')
+    .pipe(browserify({
+      insertGlobals: true,
+      debug: !gulp.env.production
+    }))
     .pipe(gulp.dest('build/chrome/js'))
     .pipe(gulp.dest('build/firefox/js'));
 });

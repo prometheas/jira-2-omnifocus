@@ -36,6 +36,7 @@
     "eslint-plugin-react": "^6.4.1",
     "gulp": "^3.9.1",
     "gulp-bower": "0.0.13",
+    "gulp-browserify": "^0.5.1",
     "gulp-eslint": "^3.0.1",
     "gulp-sass": "^2.3.2",
     "gulp-scss-lint": "^0.4.0",
