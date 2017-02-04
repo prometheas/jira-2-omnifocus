@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var del = require('del');
 var bower = require('gulp-bower');
+var mocha = require('gulp-mocha');
 var sass = require('gulp-sass');
 var browserify = require('gulp-browserify');
 var shell = require('gulp-shell');
@@ -77,6 +78,23 @@ gulp.task('lint:scss', function lintScss() {
     .src('source/**/*.scss')
     .pipe(scsslint())
     .pipe(scsslint.failReporter());
+});
+
+gulp.task('test:unit', function testUnit() {
+  return gulp
+    .src('test/unit/**/*.spec.js')
+    .pipe(mocha());
+});
+
+gulp.task('dev:tdd', function devTdd() {
+  var files = [
+    'lib/*.js',
+    'lib/**/*.js',
+    'test/**/*spec.js'
+  ];
+
+  return gulp
+    .watch(files, ['test:unit']);
 });
 
 gulp.task('build', ['build:scss', 'build:js', 'build:main', 'build:images', 'build:add-vendor-js']);
