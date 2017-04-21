@@ -3,6 +3,7 @@
 Chrome extension for sending JIRA tickets to [OmniFocus](https://www.omnigroup.com/omnifocus).
 
 [![Travis CI status](https://travis-ci.org/prometheas/svn-wc-attendant.svg)](https://travis-ci.org/prometheas/svn-wc-attendant)
+<br />
 [![bitHound Overall Score](https://www.bithound.io/github/prometheas/jira-2-omnifocus/badges/score.svg)](https://www.bithound.io/github/prometheas/jira-2-omnifocus)
 [![bitHound Dependencies](https://www.bithound.io/github/prometheas/jira-2-omnifocus/badges/dependencies.svg)](https://www.bithound.io/github/prometheas/jira-2-omnifocus/master/dependencies/npm)
 [![bitHound Dev Dependencies](https://www.bithound.io/github/prometheas/jira-2-omnifocus/badges/devDependencies.svg)](https://www.bithound.io/github/prometheas/jira-2-omnifocus/master/dependencies/npm)
