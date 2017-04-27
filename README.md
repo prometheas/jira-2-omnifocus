@@ -8,6 +8,8 @@ Chrome extension for sending JIRA tickets to [OmniFocus](https://www.omnigroup.c
 [![bitHound Dependencies](https://www.bithound.io/github/prometheas/jira-2-omnifocus/badges/dependencies.svg)](https://www.bithound.io/github/prometheas/jira-2-omnifocus/master/dependencies/npm)
 [![bitHound Dev Dependencies](https://www.bithound.io/github/prometheas/jira-2-omnifocus/badges/devDependencies.svg)](https://www.bithound.io/github/prometheas/jira-2-omnifocus/master/dependencies/npm)
 [![bitHound Code](https://www.bithound.io/github/prometheas/jira-2-omnifocus/badges/code.svg)](https://www.bithound.io/github/prometheas/jira-2-omnifocus)
+<br />
+[![Scrutinizer status](https://scrutinizer-ci.com/g/prometheas/svn-wc-attendant/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/prometheas/svn-wc-attendant/?branch=master)
 
 This extension adds a big, lovely "Send to OmniFocus" button atop the right column of the JIRA ticket page.  Click that button to quickly send a JIRA ticket into OmniFocus.  The extension also supports [Mail Drop](http://www.omnigroup.com/blog/deliver-actions-to-your-omnifocus-inbox-with-mail-drop), so you can send items to your OmniFocus Inbox _even if you haven't got OmniFocus installed on this computer_. (Yes, even from Linux or Windows.)
 
