@@ -3,32 +3,32 @@
 function encodeTaskProperties(omnifocusTask) {
   return {
     name: encodeURIComponent(omnifocusTask.name),
-    note: encodeURIComponent(omnifocusTask.note)
+    note: encodeURIComponent(omnifocusTask.note),
   };
 }
 
-var senders = {
-  app: function (config, encodedTask) {
-    return 'omnifocus:///add?name=' + encodedTask.name + '&note=' + encodedTask.note;
+const senders = {
+  app(config, encodedTask) {
+    return `omnifocus:///add?name=${encodedTask.name}&note=${encodedTask.note}`;
   },
-  maildrop: function (config, encodedTask) {
-    return "mailto:" + config.address + "@sync.omnigroup.com?subject=" + encodedTask.name + "&body=" + encodedTask.note;
-  }
+  maildrop(config, encodedTask) {
+    return `mailto:${config.address}@sync.omnigroup.com?subject=${encodedTask.name}&body=${encodedTask.note}`;
+  },
 };
 
-var actions = {
-  createTask: function (taskInfo) {
-    var sender = localStorage.sender || "app";
-    var encodedTask = encodeTaskProperties(taskInfo);
+const actions = {
+  createTask(taskInfo) {
+    const sender = localStorage.sender || 'app';
+    const encodedTask = encodeTaskProperties(taskInfo);
 
     return {
-      url: senders[sender](localStorage, encodedTask)
+      url: senders[sender](localStorage, encodedTask),
     };
-  }
+  },
 };
 
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  var responseData = false;
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  let responseData = false;
 
   if (actions[request.method]) {
     responseData = actions[request.method](request.params);

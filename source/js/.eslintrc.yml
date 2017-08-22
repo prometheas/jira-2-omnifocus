@@ -1,9 +1,0 @@
----
-  rules:
-    camelcase: off
-    func-names: off
-    no-console: off
-    no-unused-vars: off
-    no-use-before-define: off
-    quotes: off
-    vars-on-top: off
