@@ -1,4 +1,1 @@
----
-  extends: airbnb/legacy
-  env:
-    node: true
+extends: airbnb-base
