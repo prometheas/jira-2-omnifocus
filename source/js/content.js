@@ -1,6 +1,6 @@
 /* eslint-env browser, jquery, webextensions */
 
-var $sendButton = $("<a id=\"send-to-omnifocus\">Send to OmniFocus &raquo;</a>");
+var $sendButton = $("<ul class=\"toolbar-group pluggable-ops\"><li class=\"toolbar-item\"><a class=\"toolbar-trigger viewissue-share\" href=\"#\" original-title=\"Send this issue to Omnifocus\"><span class=\"trigger-label\">Send to Omnifocus</span></a></li></ul>");
 
 $(function () {
   // creates an OF task using the supplied ticket info
@@ -20,7 +20,7 @@ $(function () {
     });
   }
 
-  $sendButton.prependTo("#viewissuesidebar");
+  $sendButton.prependTo($(".command-bar .ops-menus .toolbar-split-right"));
 
   $sendButton.on('click', function (evt) {
     evt.preventDefault();
