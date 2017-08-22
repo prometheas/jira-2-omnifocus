@@ -1,28 +1,26 @@
-'use strict';
+const _ = require('lodash');
+const expect = require('chai').expect;
+const path = require('path');
+const sinon = require('sinon');
 
-var _ = require('lodash');
-var expect = require('chai').expect;
-var path = require('path');
-var sinon = require('sinon');
+const projectRoot = path.resolve(__dirname, '..', '..', '..', '..');
 
-var projectRoot = path.resolve(__dirname, '..', '..', '..', '..');
+describe('events', () => {
+  let runtime;
 
-describe('events', function () {
-  var runtime;
-
-  before(function () {
+  before(() => {
     _.set(global, 'chrome.runtime', {
       onMessage: {
-        addListener: sinon.spy()
-      }
+        addListener: sinon.spy(),
+      },
     });
 
     runtime = global.chrome.runtime;
   });
 
-  describe('initialization', function () {
-    it('should bind to message events', function () {
-      var initialCallCount = runtime.onMessage.addListener.callCount;
+  describe('initialization', () => {
+    it('should bind to message events', () => {
+      const initialCallCount = runtime.onMessage.addListener.callCount;
 
       // eslint-disable-next-line
       require(path.join(projectRoot, 'source', 'js', 'events'));
