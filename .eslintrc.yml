@@ -1,1 +1,3 @@
 extends: airbnb-base
+env:
+  browser: true
