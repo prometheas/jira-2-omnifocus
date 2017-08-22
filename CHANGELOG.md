@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Zepto is now installed via bower during build
 - JS files now conform to ESLint configs
 - Replaced use of deprecated `chrome.extension` API with `chrome.runtime`
+- Updated ESLint rules, changed files to conform to new rules
 
 ## v1.1.2
 ### Added
