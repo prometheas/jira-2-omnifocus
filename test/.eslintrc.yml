@@ -1,8 +1,3 @@
 ---
   env:
     mocha: true
-
-  rules:
-    func-names: 0
-    max-len: 0
-    vars-on-top: 0
