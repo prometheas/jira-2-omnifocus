@@ -28,7 +28,7 @@ $(() => {
     createTaskForTicket({
       key: $('#key-val').text(),
       summary: $('#summary-val').text().replace(/\s+/, ' ').replace(/^\s*(\S.+\S)\s*$/, '$1'),
-      description: $("#description-val").text().replace(/[ ]{2,}/g, '').trim()
+      description: $('#description-val').text().replace(/[ ]{2,}/g, '').trim(),
     });
   });
 });
