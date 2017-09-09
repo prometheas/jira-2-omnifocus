@@ -75,7 +75,7 @@ gulp.task('dev:tdd', () => {
     .watch(files, ['test:unit']);
 });
 
-gulp.task('build', ['build:scss', 'build:js', 'build:main', 'build:images', 'build:add-vendor-js']);
-gulp.task('lint', ['lint:js', 'lint:scss']);
+gulp.task('build', ['build:js', 'build:main', 'build:images', 'build:add-vendor-js']);
+gulp.task('lint', ['lint:js']);
 
 gulp.task('default', ['build']);

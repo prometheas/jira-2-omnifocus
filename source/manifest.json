@@ -20,9 +20,6 @@
         "*://*/browse/*",
         "*://*/*/browse/*"
       ],
-      "css": [
-        "css/content.css"
-      ],
       "js": [
         "js/vendor/zeptojs/dist/zepto.min.js",
         "js/content.js"
