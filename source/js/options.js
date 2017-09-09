@@ -7,7 +7,7 @@ function save_options() {
 
   $address.val($address.val().replace(/^\s*/, '').replace(/\s*$/, ''));
   var address = $address.val();
-  var isAddressValid = address.match(/^[a-z\.-_]+$/i);
+  var isAddressValid = address.match(/^[a-z.-_]+$/i);
 
   if (isAddressValid) {
     $address.removeClass("invalid");
