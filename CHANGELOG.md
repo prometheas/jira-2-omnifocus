@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Replaced use of deprecated `chrome.extension` API with `chrome.runtime`
 - Changed button to fit in with existing JIRA styles
 - Changed button location to be on the command bar
+- Removed additional whitespace from the description field
 
 ## v1.1.2
 ### Added
