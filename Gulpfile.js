@@ -4,12 +4,10 @@ var gulp = require('gulp');
 var del = require('del');
 var bower = require('gulp-bower');
 var mocha = require('gulp-mocha');
-var sass = require('gulp-sass');
 var browserify = require('gulp-browserify');
 var shell = require('gulp-shell');
 
 var eslint = require('gulp-eslint');
-var scsslint = require('gulp-scss-lint');
 
 gulp.task('clean', function clean() {
   return del(['./build/', './vendor/']);
@@ -55,27 +53,12 @@ gulp.task('build:images', function buildImages() {
     .pipe(gulp.dest('build/firefox/images'));
 });
 
-gulp.task('build:scss', function buildCss() {
-  return gulp
-    .src('source/styles/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('build/chrome/css'))
-    .pipe(gulp.dest('build/firefox/css'));
-});
-
 gulp.task('lint:js', function lintJs() {
   return gulp
     .src('source/js/*.js')
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
-});
-
-gulp.task('lint:scss', function lintScss() {
-  return gulp
-    .src('source/**/*.scss')
-    .pipe(scsslint())
-    .pipe(scsslint.failReporter());
 });
 
 gulp.task('test:unit', function testUnit() {
@@ -95,7 +78,7 @@ gulp.task('dev:tdd', function devTdd() {
     .watch(files, ['test:unit']);
 });
 
-gulp.task('build', ['build:scss', 'build:js', 'build:main', 'build:images', 'build:add-vendor-js']);
-gulp.task('lint', ['lint:js', 'lint:scss']);
+gulp.task('build', ['build:js', 'build:main', 'build:images', 'build:add-vendor-js']);
+gulp.task('lint', ['lint:js']);
 
 gulp.task('default', ['build']);
