@@ -4,7 +4,6 @@
   "description": "Chrome extension for sending JIRA tickets to OmniFocus.",
   "main": "index.js",
   "scripts": {
-    "bower": "./node_modules/.bin/bower",
     "clean": "npm run gulp clean",
     "build": "npm run gulp build",
     "gulp": "./node_modules/.bin/gulp",
