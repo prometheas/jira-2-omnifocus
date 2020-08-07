@@ -9,9 +9,7 @@
     "256": "images/omnifocus-256.png"
   },
 
-  "permissions": [
-    "tabs"
-  ],
+  "permissions": [],
 
   "options_page": "options.html",
   "content_scripts": [
