@@ -2,7 +2,6 @@
 
 var gulp = require('gulp');
 var del = require('del');
-var bower = require('gulp-bower');
 var mocha = require('gulp-mocha');
 var sass = require('gulp-sass');
 var browserify = require('gulp-browserify');
@@ -11,31 +10,23 @@ var shell = require('gulp-shell');
 var eslint = require('gulp-eslint');
 var scsslint = require('gulp-scss-lint');
 
-gulp.task('clean', function clean() {
-  return del(['./build/', './vendor/']);
-});
-
-gulp.task('bower:install', function bowerInstall(done) {
-  bower();
+gulp.task('clean', function clean(done) {
+  del(['./build/', './vendor/']);
   done();
 });
 
-gulp.task('bower:build-zepto', gulp.series('bower:install'), (done) => {
-  shell.task('npm install && npm run dist', {
-    cwd: 'vendor/zeptojs'
-  });
+gulp.task('fetch-zepto', shell.task(
+  'mkdir -p vendor/zeptojs && curl -s https://zeptojs.com/zepto.min.js > vendor/zeptojs/zepto.min.js'
+));
 
-  done();
-});
-
-gulp.task('build:add-vendor-js', gulp.series('bower:build-zepto'), function vendorDeps(done) {
+gulp.task('build:add-vendor-js', gulp.series('fetch-zepto', (done) => {
   gulp
-    .src('vendor/**/*.min.js')
-    .pipe(gulp.dest('build/chrome/js/vendor'))
-    .pipe(gulp.dest('build/firefox/js/vendor'));
+    .src('./vendor/zeptojs/zepto.min.js')
+    .pipe(gulp.dest('./build/chrome/js/vendor'))
+    .pipe(gulp.dest('./build/firefox/js/vendor'));
 
   done();
-});
+}));
 
 gulp.task('build:js', function buildJs(done) {
   gulp
@@ -47,7 +38,7 @@ gulp.task('build:js', function buildJs(done) {
     .pipe(gulp.dest('build/chrome/js'))
     .pipe(gulp.dest('build/firefox/js'));
 
-    done();
+  done();
 });
 
 gulp.task('build:main', function buildMain(done) {
