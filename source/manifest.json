@@ -24,7 +24,7 @@
         "css/content.css"
       ],
       "js": [
-        "js/vendor/zeptojs/dist/zepto.min.js",
+        "js/vendor/zepto.min.js",
         "js/content.js"
       ]
     }
