@@ -3,7 +3,7 @@
 
   "name": "JIRA to OmniFocus",
   "description": "Adds a 'Send to OmniFocus' button to JIRA ticket pages.",
-  "version": "1.1.2",
+  "version": "1.2",
 
   "icons": {
     "256": "images/omnifocus-256.png"

@@ -20,6 +20,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - JS files now conform to ESLint configs
 - Replaced use of deprecated `chrome.extension` API with `chrome.runtime`
 
+## v1.2
+- Update project to build on modern Node
+- Removed bower dependency
+- Updated some dev dependencies
+
 ## v1.1.2
 ### Added
 - Support for JIRA installations configured deeper within a host's document root. Fixes prometheas/jira-2-omnifocus#6.
