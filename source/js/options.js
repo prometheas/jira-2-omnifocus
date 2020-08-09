@@ -1,4 +1,5 @@
 /* eslint-env browser, jquery */
+import react from '../../vendor/react/react.min.js';
 
 // Saves options to localStorage.
 function save_options() {

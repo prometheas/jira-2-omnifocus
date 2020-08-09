@@ -2,11 +2,14 @@
 
 var gulp = require('gulp');
 var del = require('del');
+var babel = require('gulp-babel');
 var bower = require('gulp-bower');
+// var concat = require('gulp-concat');
 var mocha = require('gulp-mocha');
 var sass = require('gulp-sass');
-var browserify = require('gulp-browserify');
 var shell = require('gulp-shell');
+// var sourcemaps = require('gulp-sourcemaps');
+
 
 var eslint = require('gulp-eslint');
 var scsslint = require('gulp-scss-lint');
@@ -30,12 +33,34 @@ gulp.task('build:add-vendor-js', ['bower:build-zepto'], function vendorDeps() {
     .pipe(gulp.dest('build/firefox/js/vendor'));
 });
 
-gulp.task('build:js', function buildJs() {
+gulp.task('build:js:options', function buildJs() {
   return gulp
     .src('source/js/*.js')
-    .pipe(browserify({
-      insertGlobals: true,
-      debug: !gulp.env.production
+    .pipe(babel({
+      presets: ['es2015', 'react'],
+      sourceRoot: __dirname
+    }))
+    .pipe(gulp.dest('build/chrome/js'))
+    .pipe(gulp.dest('build/firefox/js'));
+});
+
+gulp.task('build:js:events', function buildJs() {
+  return gulp
+    .src('source/js/*.js')
+    .pipe(babel({
+      presets: ['es2015', 'react'],
+      sourceRoot: __dirname
+    }))
+    .pipe(gulp.dest('build/chrome/js'))
+    .pipe(gulp.dest('build/firefox/js'));
+});
+
+gulp.task('build:js', ['build:js:options', 'build:js:events'], function buildJs() {
+  return gulp
+    .src('source/js/*.js')
+    .pipe(babel({
+      presets: ['es2015', 'react'],
+      sourceRoot: __dirname
     }))
     .pipe(gulp.dest('build/chrome/js'))
     .pipe(gulp.dest('build/firefox/js'));
