@@ -22,8 +22,8 @@
         "css/content.css"
       ],
       "js": [
-        "js/vendor/zepto.min.js",
-        "js/turndown/turndown.js",
+        "js/vendor/zeptojs/zepto.min.js",
+        "js/vendor/turndown/turndown.js",
         "js/content.js"
       ]
     }

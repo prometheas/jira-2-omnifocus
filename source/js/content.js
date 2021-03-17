@@ -1,6 +1,8 @@
 /* eslint-env browser, jquery, webextensions */
 
 var $sendButton = $("<a id=\"send-to-omnifocus\">Send to OmniFocus &raquo;</a>");
+var turndownService = new TurndownService();
+console.log(turndownService.turndown($(".ak-renderer-document").html()))
 
 $(function () {
   // creates an OF task using the supplied ticket info
@@ -30,7 +32,7 @@ $(function () {
     createTaskForTicket({
       key: $("#jira-issue-header a:last-child").text(),
       summary: $("h1").text().replace(/\s+/, ' ').replace(/^\s*(\S.+\S)\s*$/, '$1'),
-      description: $(".ak-renderer-document").text()
+      description: turndownService.turndown($(".ak-renderer-document").html())
     });
   });
 });

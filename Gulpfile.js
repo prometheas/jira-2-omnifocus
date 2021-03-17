@@ -19,14 +19,22 @@ gulp.task('fetch-zepto', shell.task(
   'mkdir -p vendor/zeptojs && curl -s https://zeptojs.com/zepto.min.js > vendor/zeptojs/zepto.min.js'
 ));
 
-gulp.task('build:add-vendor-js', gulp.series('fetch-zepto', (done) => {
-  gulp
-    .src('./vendor/zeptojs/zepto.min.js')
-    .pipe(gulp.dest('./build/chrome/js/vendor'))
-    .pipe(gulp.dest('./build/firefox/js/vendor'));
+gulp.task('fetch-turndown', shell.task(
+  'mkdir -p vendor/turndown && curl -s https://unpkg.com/turndown@7.0.0/dist/turndown.js > vendor/turndown/turndown.js'
+));
 
-  done();
-}));
+gulp.task('build:add-vendor-js', gulp.series(
+  'fetch-zepto',
+  'fetch-turndown',
+  (done) => {
+    gulp
+      .src('./vendor/**/*.js')
+      .pipe(gulp.dest('./build/chrome/js/vendor'))
+      .pipe(gulp.dest('./build/firefox/js/vendor'));
+
+      done();
+  }
+));
 
 gulp.task('build:js', function buildJs(done) {
   gulp
