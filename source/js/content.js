@@ -29,7 +29,7 @@ $(function () {
     createTaskForTicket({
       key: $("#jira-issue-header a:last-child").text(),
       summary: $("h1").text().replace(/\s+/, ' ').replace(/^\s*(\S.+\S)\s*$/, '$1'),
-      description: turndownService.turndown($(".ak-renderer-document").html())
+      description: turndownService.turndown($(".ak-renderer-document").html() || '')
     });
   });
 });
