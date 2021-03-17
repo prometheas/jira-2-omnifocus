@@ -1,6 +1,7 @@
 /* eslint-env browser, jquery, webextensions */
 
 var $sendButton = $("<a id=\"send-to-omnifocus\">Send to OmniFocus &raquo;</a>");
+var turndownService = new TurndownService();
 
 $(function () {
   // creates an OF task using the supplied ticket info
@@ -20,15 +21,15 @@ $(function () {
     });
   }
 
-  $sendButton.prependTo("#viewissuesidebar");
+  $sendButton.prependTo("#jira-issue-header-actions");
 
   $sendButton.on('click', function (evt) {
     evt.preventDefault();
 
     createTaskForTicket({
-      key: $("#key-val").text(),
-      summary: $("#summary-val").text().replace(/\s+/, ' ').replace(/^\s*(\S.+\S)\s*$/, '$1'),
-      description: $("#description-val").html()
+      key: $("#jira-issue-header a:last-child").text(),
+      summary: $("h1").text().replace(/\s+/, ' ').replace(/^\s*(\S.+\S)\s*$/, '$1'),
+      description: turndownService.turndown($(".ak-renderer-document").html() || '')
     });
   });
 });

@@ -45,6 +45,7 @@
     "sinon": "^1.17.6"
   },
   "dependencies": {
+    "gulp-cli": "^2.3.0",
     "lodash": "^4.17.19"
   }
 }
