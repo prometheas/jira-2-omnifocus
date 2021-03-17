@@ -2,7 +2,6 @@
 
 var $sendButton = $("<a id=\"send-to-omnifocus\">Send to OmniFocus &raquo;</a>");
 var turndownService = new TurndownService();
-console.log(turndownService.turndown($(".ak-renderer-document").html()))
 
 $(function () {
   // creates an OF task using the supplied ticket info
@@ -23,8 +22,6 @@ $(function () {
   }
 
   $sendButton.prependTo("#jira-issue-header-actions");
-
-  console.log($sendButton)
 
   $sendButton.on('click', function (evt) {
     evt.preventDefault();
