@@ -41,7 +41,7 @@
     "gulp-scss-lint": "^1.0.0",
     "gulp-shell": "^0.8.0",
     "mocha": "^8.1.1",
-    "shelljs": "^0.7.4",
+    "shelljs": "^0.8.5",
     "sinon": "^1.17.6"
   },
   "dependencies": {
