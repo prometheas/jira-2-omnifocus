@@ -1,0 +1,44 @@
+name: Feature Request
+description: Request new capabilities or refinements.
+title: "[Feature Request]: "
+labels: ["feature request", "triage"]
+assignees:
+  - prometheas
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for using the extension!  Please describe what you'd like to see in the future.
+        You may include images, videos, and of course links to help communicate your idea.
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browser(s) are you using the extension on?
+      multiple: true
+      options:
+        - Brave, Desktop
+        - Brave, Mobile
+        - Chrome, Desktop
+        - Chrome, Mobile
+        - Firefox, Desktop
+        - Firefox, Mobile
+        - Microsoft Edge, Desktop
+        - Microsoft Edge, Mobile
+        - Safari, macOS
+        - Safari, iOS / iPadOS
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
