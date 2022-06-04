@@ -8,16 +8,25 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for using the extension!  Please describe what you'd like to see in the future.
-        You may include images, videos, and of course links to help communicate your idea.
-  - type: input
-    id: contact
+        ## Request a New Feature
+  - type: textarea
+    id: description
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Feature Description
+      description: |
+        Please describe what you'd like to see in the future. This is a markdown-capable \
+        field, so please feel free to include images, videos, and of course any links to \
+        that might help communicate your idea.
     validations:
-      required: false
+      required: true
+  - type: input
+      id: contact
+      attributes:
+        label: Contact Details
+        description: How can we get in touch with you if we need more info?
+        placeholder: ex. email@example.com
+      validations:
+        required: false
   - type: dropdown
     id: browsers
     attributes:
